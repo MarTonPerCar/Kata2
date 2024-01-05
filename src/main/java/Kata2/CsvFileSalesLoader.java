@@ -15,11 +15,11 @@ public class CsvFileSalesLoader implements SalesLoader{
         this.file = file;
     }
     @Override
-    public List<Sales> load() {
+    public List<Sales> load(){
         try {
             return load(new FileReader(file));
         } catch (IOException E) {
-            throw new Exception(E);
+            throw new RuntimeException(E);
         }
     }
 
